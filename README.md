@@ -1,4 +1,4 @@
-#Final Project: Robot Mapping and Navigation
+# Final Project: Robot Mapping and Navigation
 
 *Team 13: Girish, Muhammad, Andy, and Van*
 
