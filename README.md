@@ -36,7 +36,7 @@ The accomplishments of the project were:
 
 *[Link to Final Presentation](https://docs.google.com/presentation/d/1ybNZCItvh3Inb4xyIm9jMdvE7QkdUHSAgcw-_27GDpM/edit?usp=sharing)*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/89NYezgTyDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+*[Link to video showing real-time mapping](https://youtu.be/89NYezgTyDc)*
 
 ## Hardware Setup 
 
@@ -112,6 +112,22 @@ This case is excellent because it is robust and doesn't break easily, unlike mos
 
 
 ## Autonomous Laps 
+
+As part of the class deliverables and as preparation for the final project, here are our autonomous laps videos:
+
+__Donkey Sim__
+
+* Local Computer: https://youtu.be/lXEStSEVikQ
+* GPU training: https://youtu.be/4_BzKP9-XAQ
+* External Server: https://youtu.be/Yvo1yqRJhX4
+
+__Physical Robot__
+
+* DonkeyCar: https://youtu.be/bPUSS2g0Ves
+* Lane detection using OpenCV + ROS2: https://youtu.be/omcDCBSrl2I
+* Inner lane: https://youtu.be/9hN8HUlGcas
+* Outer lane: https://youtu.be/nXZNPscVlX0
+* GPS: https://youtu.be/Y3I9AWW1R6o
 
 ## Acknowledgements 
 
