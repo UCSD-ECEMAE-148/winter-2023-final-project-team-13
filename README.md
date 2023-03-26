@@ -1,10 +1,11 @@
-# Final Project: Robot Mapping and Navigation
+# Final Project: Robot Mapping
 
 *Team 13: Girish, Muhammad, Andy, and Van*
 
 Welcome to the project report for Team 13! This page contains a report of all the progress we made throughout this busy and fun quarter, including our final project.
 
-![](/images/car.jpg)
+|![](/images/car.jpg)| ![](/images/car2.jpg)|
+|---|---|
 
 *Team 13's assembled RC Car with the lidar placed at the front.*
 
@@ -18,25 +19,39 @@ Welcome to the project report for Team 13! This page contains a report of all th
 
 ## Final Project Abstract 
 
-Our final project was themed around **mapping an unknown environment**. Our project involved the following tasks:
+Our final project was themed around **mapping an unknown environment**. Our project involved the following tasks.
 
-* To implement SLAM (Simultaneous Localization and Mapping) using a lidar. This effectively creates a map of the environment around the robot, showing the locations of all objects present.
-* To display the map generated from SLAM in real-time using a web application.
+__What we promised__
 
-The challenges faced during the project were:
+* [✔] To implement SLAM (Simultaneous Localization and Mapping) using a lidar. This effectively creates a map of the environment around the robot, showing the locations of all objects present.
+* [✔] To display the map generated from SLAM in real-time using a web application.
+
+The __challenges faced__ during the project were:
 
 * Integrating the web application for live previewing (HTML/CSS/JS) with the Python code needed to run SLAM.
 * Avoiding delays in the updating map.
 
-The accomplishments of the project were:
+The __accomplishments__ of the project were:
 
 * We were able to achieve a decent visualization that updates over time as the robot is driven around
 * The visualization/map can be saved easily for tasks such as path planning.
 
+__Final Presentation__
 
-*[Link to Final Presentation](https://docs.google.com/presentation/d/1ybNZCItvh3Inb4xyIm9jMdvE7QkdUHSAgcw-_27GDpM/edit?usp=sharing)*
+* *[Link to Final Presentation](https://docs.google.com/presentation/d/1ybNZCItvh3Inb4xyIm9jMdvE7QkdUHSAgcw-_27GDpM/edit?usp=sharing)*
 
-*[Link to video showing real-time mapping](https://youtu.be/89NYezgTyDc)*
+* *[Link to video showing real-time mapping](https://youtu.be/89NYezgTyDc)*
+
+__Weekly Update Presentations__
+
+* [Project Proposal](https://docs.google.com/presentation/d/1BA-ZTRFRMCwjRi_ehfDn4Fll8nvdWeSgA-vcFacIhXk/edit?usp=sharing)
+* [Week 8](https://docs.google.com/presentation/d/1aqbrDsI9-qD3Cdtn5Y08WQpj--RP-w43sHdjfP7Nmr0/edit?usp=sharing)
+* [Week 9](https://docs.google.com/presentation/d/1mEIa4phqNgUHyFd5yaW6FJG1RRwc04al4UiSqWt_TiU/edit?usp=sharing)
+* [Week 10](https://docs.google.com/presentation/d/1PwtRmnkmlwk-wUWYZGFs0CjX7lSMBmuzCTyH2MfmV7g/edit?usp=sharing)
+
+__Gantt Chart__
+
+![](/images/gantt.png)
 
 ## Hardware Setup 
 
@@ -131,4 +146,12 @@ __Physical Robot__
 
 ## Acknowledgements 
 
-Thanks Prof. Jack Silberman and TAs Moises Lopez and Kishore Nukala for an awesome quarter! See you in DSC 178, professor Jack ;)
+Thanks Prof. Jack Silberman and TAs Moises Lopez and Kishore Nukala for an awesome quarter! See you in DSC 178 next quarter, professor Jack ;)
+
+## Credit and References
+
+* Jetson Nano Case Design: https://www.thingiverse.com/thing:3532828
+
+* Lidar (LD06) Python Tutorial: https://github.com/henjin0/LIDAR_LD06_python_loder
+* PyVESC: https://github.com/LiamBindle/PyVESC
+* SLAM tutorial, Dominic Nightingale. https://gitlab.com/ucsd_robocar/ucsd_robocar_nav1_pkg/-/tree/master/
