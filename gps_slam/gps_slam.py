@@ -1,6 +1,10 @@
 from filterpy.kalman import KalmanFilter
 from filterpy.common import Q_discrete_white_noise
 import numpy as np
+import LD06
+
+# Initialize lidar
+lidar = LD06.LD06('/dev/tty.usbserial-0001', 230400, 5.0, 8, 'N', 1)
 
 # Initialize Kalman filter
 kf = KalmanFilter(dim_x=5, dim_z=2)
@@ -40,7 +44,7 @@ def get_vesc_data():
 while True:
     # Get sensor data
     gps_data = get_gps_data()
-    lidar_data = get_lidar_data()
+    lidar_data = lidar.get_lidar_data()
     vesc_data = get_vesc_data()
     
     # Update Kalman filter with sensor data
