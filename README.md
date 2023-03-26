@@ -1,23 +1,22 @@
-#<center>Final Project: Robot Mapping and Navigation</center>
+#Final Project: Robot Mapping and Navigation
 
-*<center>Team 13: Girish, Muhammad, Andy, and Van</center>*
+*Team 13: Girish, Muhammad, Andy, and Van*
 
 Welcome to the project report for Team 13! This page contains a report of all the progress we made throughout this busy and fun quarter, including our final project.
 
 ![](/images/car.jpg)
 
-*<center>Team 13's assembled RC Car with the lidar placed at the front.</center>*
+*Team 13's assembled RC Car with the lidar placed at the front.*
 
 
-
-##<center>The Team</center>
+## The Team 
 
 |![](/images/girish.jpeg)|![](/images/muhammad.png)|![](images/andy.png)|![](/images/van.jpeg)|
 |---|---|---|---|
 |**Girish Krishnan** [[LinkedIn](https://linkedin.com/in/girk)]|**Muhammad Bintang Gemilang** |**Andy Zhang** |**Zhengyu (Van) Huang** |
 |Electrical Engineering|Mechanical Engineering|Electrical Engineering|Computer Engineering|
 
-##<center>Final Project Abstract</center>
+## Final Project Abstract 
 
 Our final project was themed around **mapping an unknown environment**. Our project involved the following tasks:
 
@@ -39,7 +38,7 @@ The accomplishments of the project were:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/89NYezgTyDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-##<center>Hardware Setup</center>
+## Hardware Setup 
 
 * __3D Printing:__ Camera Mount, Jetson Nano Case, GPS (GNSS) Case.
 * __Laser Cutting:__ Base plate to mount electronics and other components.
@@ -69,15 +68,15 @@ __Parts List__
 * Micro USB to USB cable
 * 5V, 4A power supply for Jetson Nano
 
-####<center>Base Plate</center>
+#### Base Plate 
 
 ![](/images/base_plate.png)
 
-*<center>All measurements shown above are in millimeters (mm)</center>*
+*All measurements shown above are in millimeters (mm)*
 
 Our base plate was laser cut on a thick acrylic sheet. The circular hole at the end of the base plate is meant to hold the power on/off button. The long holes in the side of the plate are meant for wires to easily pass to and from the bottom of the plate.
 
-####<center>Camera Mount</center>
+#### Camera Mount 
 
 |![](/images/camera_mount.png)|![](/images/camera_mount_base.png)|
 |---|---|
@@ -92,7 +91,7 @@ One of our older camera mount designs is shown below.
 
 This camera mount consists of three parts: one base for attachment to the base plate, one middle piece to connect the base and the camera, and the camera holder. This camera mount design allows you to rotate the camera up and down. However, it is important that the rotating hinge is screwed securely so that the hinge doesn't wobble out while the robot does autonomous laps!
 
-####<center>Jetson Nano Case</center>
+#### Jetson Nano Case 
 
 *Credit to flyattack from Thingiverse, see: https://www.thingiverse.com/thing:3532828*
 
@@ -102,18 +101,18 @@ This camera mount consists of three parts: one base for attachment to the base p
 
 This case is excellent because it is robust and doesn't break easily, unlike most common Jetson Nano cases.
 
-####<center>Electronics Circuit Diagram</center>
+#### Electronics Circuit Diagram 
 
 ![](/images/circuit.png)
 
-*<center>Note: some of these components and connections will vary depending on the exact components you have - check the component specifications carefully.</center>*
+*Note: some of these components and connections will vary depending on the exact components you have - check the component specifications carefully.*
 
-##<center>Software Documentation</center>
+## Software Documentation 
 
 
 
-##<center>Autonomous Laps</center>
+## Autonomous Laps 
 
-##<center>Acknowledgements</center>
+## Acknowledgements 
 
 Thanks Prof. Jack Silberman and TAs Moises Lopez and Kishore Nukala for an awesome quarter! See you in DSC 178, professor Jack ;)
