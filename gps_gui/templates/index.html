@@ -1,0 +1,63 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coordinate Plotter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <canvas id="plot" width="600" height="400"></canvas>
+    <script>
+      var canvas = document.getElementById("plot");
+      var ctx = canvas.getContext("2d");
+      var coordinates = [];
+
+      function draw() {
+        $.get("/coordinates", function(data) {
+          coordinates = data;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (var i = 0; i < coordinates.length; i++) {
+            var x = coordinates[i].x;
+            var y = coordinates[i].y;
+            ctx.beginPath();
+            ctx.arc(x, y, 5, 0, 2 * Math.PI);
+            ctx.fill();
+          }
+        });
+      }
+
+      function findClickedCoordinate(x, y) {
+        for (var i = 0; i < coordinates.length; i++) {
+          var cx = coordinates[i].x;
+          var cy = coordinates[i].y;
+          var distance = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy));
+          if (distance <= 5) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      canvas.addEventListener("click", function(event) {
+        var rect = canvas.getBoundingClientRect();
+        var x = event.clientX - rect.left;
+        var y = event.clientY - rect.top;
+        var index = findClickedCoordinate(x, y);
+        if (index !== -1) {
+          var newX = parseFloat(prompt("Enter new x coordinate:", coordinates[index].x));
+          var newY = parseFloat(prompt("Enter new y coordinate:", coordinates[index].y));
+          if (!isNaN(newX) && !isNaN(newY)) {
+            $.post("/update_coordinates", {"x": newX, "y": newY, "index": index}, function(data) {
+              alert(data["message"]);
+              draw();
+            });
+          }
+        }
+      });
+
+      draw();
+    </script>
+  </body>
+</html>
