@@ -1,4 +1,5 @@
-# Final Project: Robot Mapping
+![](/images/ucsdlogo.png)
+# Team 13 Winter 2023 Final Project: Robot Mapping
 
 *Team 13: Girish, Muhammad, Andy, and Van*
 
@@ -9,6 +10,21 @@ Welcome to the project report for Team 13! This page contains a report of all th
 
 *Team 13's assembled RC Car with the lidar placed at the front.*
 
+## Table of Contents
+
+- [Team 13 Winter 2023 Final Project: Robot Mapping](#team-13-winter-2023-final-project-robot-mapping)
+  - [Table of Contents](#table-of-contents)
+  - [The Team](#the-team)
+  - [Final Project Abstract](#final-project-abstract)
+  - [Hardware Setup](#hardware-setup)
+      - [Base Plate](#base-plate)
+      - [Camera Mount](#camera-mount)
+      - [Jetson Nano Case](#jetson-nano-case)
+      - [Electronics Circuit Diagram](#electronics-circuit-diagram)
+  - [Software Documentation](#software-documentation)
+  - [Autonomous Laps](#autonomous-laps)
+  - [Acknowledgements](#acknowledgements)
+  - [Credit and References](#credit-and-references)
 
 ## The Team 
 
@@ -117,14 +133,46 @@ This camera mount consists of three parts: one base for attachment to the base p
 This case is excellent because it is robust and doesn't break easily, unlike most common Jetson Nano cases.
 
 #### Electronics Circuit Diagram 
-
+![](/images/schematic.png)
 ![](/images/circuit.png)
 
 *Note: some of these components and connections will vary depending on the exact components you have - check the component specifications carefully.*
 
 ## Software Documentation 
 
+To install all the necessary Python modules needed, run the following on the Jetson Nano.
 
+```bash
+pip install -r requirements.txt
+```
+
+For our final project, we implemented a real-time visualization system for the Hector SLAM algorithm implemented using the lidar sensor. The base code for the SLAM algorithm is accessible in the Docker container provided to us in class, and the code for the real-time implementation is present in the **slam_gui** folder of this repository.
+
+The SLAM real-time visualization GUI that we built has the following features:
+
+* A web application whose routes are made using FastAPI in Python. Uvicorn is used to run the web server.
+* HTML and JS to update the map in real-time
+* The HTML and JS is interfaced with Python, ROS1, ROS2 and ROSBridge, so that the data collected is displayed on the web app.
+* The interfacing process is difficult to implement directly in Python, so we use *subprocessing* to call relevant bash scripts that handle the processes in ROS1 and ROS2. These subprocesses are made to run in parallel using *threading* in Python.
+
+To run the visualizer, first open up a docker container containing the ucsd_robocar ROS packages.
+
+Run the following:
+
+```bash
+cd slam_gui
+python slam_map.py
+```
+
+This sets up the web app running on the Jetson Nano (although the app could potentially be run on any device, provided it can communicate with the Jetson Nano using the relevant ROS topics).
+
+Opening up the web app on **http://localhost:8000** reveals the GUI showing the results of SLAM in real-time. The code in *slam_map.py* can be adjusted to fine-tune the time-delay that occurs as the map updates.
+
+![](/images/project_prev.png)
+
+__Additional Scope for the Final Project__
+
+Although SLAM is useful for mapping an unknown environment, it can be useful to integrate GPS data with SLAM to provide better location accuracy. To implement this in Python, we created the folder **gps_slam** that contains starter code with lidar, PyVESC, and GPS implementation and a basic SLAM algorithm with the Kalman filter (implemented using the filterpy library in Python). This additional, nice-to-have part of the project hasn't been tested out yet, but we plan to get it working soon.
 
 ## Autonomous Laps 
 

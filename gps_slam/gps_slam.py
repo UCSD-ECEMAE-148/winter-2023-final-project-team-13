@@ -2,9 +2,17 @@ from filterpy.kalman import KalmanFilter
 from filterpy.common import Q_discrete_white_noise
 import numpy as np
 import LD06
+from pyvesc.VESC import VESC
+import gps
 
 # Initialize lidar
 lidar = LD06.LD06('/dev/tty.usbserial-0001', 230400, 5.0, 8, 'N', 1)
+
+# Initialize VESC
+vesc = VESC.VESC('/dev/tty.usbserial-0002', baudrate=115200)
+
+# Initialize GPS
+gps = gps.GPS('/dev/tty.usbserial-0003', baudrate=9600)
 
 # Initialize Kalman filter
 kf = KalmanFilter(dim_x=5, dim_z=2)
@@ -32,13 +40,19 @@ kf.P = np.eye(5) * 10
 M = np.zeros((100, 100), dtype=np.uint8)
 
 def get_gps_data():
-    return [0, 0]
-
-def get_lidar_data():
-    return [0, 0, 0, 0]
+    # Get GPS data
+    gps_data = gps.get_values()
+    if gps_data['fix'] == 0:
+        return None
+    else:
+        return [gps_data['lat'], gps_data['lon']]
 
 def get_vesc_data():
-    return [0, 0]
+    # Get change in x and y position based on VESC data
+    vesc_data = vesc.get_values()
+    x = vesc_data['rpm'] * 0.0001
+    y = vesc_data['temp_mos'] * 0.0001
+    return [x, y]
 
 # Main loop
 while True:
