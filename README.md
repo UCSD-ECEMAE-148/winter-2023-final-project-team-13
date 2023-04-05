@@ -1,7 +1,7 @@
 ![](/images/ucsdlogo.png)
-<h1 align="center">Final Project: Robot Mapping</h1>
-<h5 align="center">Team 13: Girish, Muhammad, Andy, and Van</h3>
-<h5 align="center">ECE MAE 148, Winter 2023</h3>
+# Final Project: Robot Mapping
+##### Team 13: Girish, Muhammad, Andy, and Van
+##### ECE MAE 148, Winter 2023
 
 Welcome to the project report for Team 13! This page contains a report of all the progress we made throughout this busy and fun quarter, including our final project.
 
@@ -12,18 +12,21 @@ Welcome to the project report for Team 13! This page contains a report of all th
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [The Team](#the-team)
-- [Final Project Abstract](#final-project-abstract)
-- [Hardware Setup](#hardware-setup)
-    - [Base Plate](#base-plate)
-    - [Camera Mount](#camera-mount)
-    - [Jetson Nano Case](#jetson-nano-case)
-    - [Electronics Circuit Diagram](#electronics-circuit-diagram)
-- [Software Documentation](#software-documentation)
-- [Autonomous Laps](#autonomous-laps)
-- [Acknowledgements](#acknowledgements)
-- [Credit and References](#credit-and-references)
+- [Final Project: Robot Mapping](#final-project-robot-mapping)
+        - [Team 13: Girish, Muhammad, Andy, and Van](#team-13-girish-muhammad-andy-and-van)
+        - [ECE MAE 148, Winter 2023](#ece-mae-148-winter-2023)
+  - [Table of Contents](#table-of-contents)
+  - [The Team](#the-team)
+  - [Final Project Abstract](#final-project-abstract)
+  - [Hardware Setup](#hardware-setup)
+      - [Base Plate](#base-plate)
+      - [Camera Mount](#camera-mount)
+      - [Jetson Nano Case](#jetson-nano-case)
+      - [Electronics Circuit Diagram](#electronics-circuit-diagram)
+  - [Software Documentation](#software-documentation)
+  - [Autonomous Laps](#autonomous-laps)
+  - [Acknowledgements](#acknowledgements)
+  - [Credit and References](#credit-and-references)
 
 ## The Team 
 
